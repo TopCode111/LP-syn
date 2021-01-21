@@ -8,35 +8,6 @@ $day = date('w');
 $encode = "UTF-8";//このファイルの文字コード定義（変更不可）
 $hankaku = 0;
 mb_language("Japanese");
-/*if(isset($_GET)) $_GET = sanitize($_GET);//NULLバイト除去//
-if(isset($_POST)) $_POST = sanitize($_POST);//NULLバイト除去//
-if(isset($_COOKIE)) $_COOKIE = sanitize($_COOKIE);//NULLバイト除去//
-if($encode == 'SJIS') $_POST = sjisReplace($_POST,$encode);//Shift-JISの場合に誤変換文字の置換実行*/
-
-/*function h($string) {
-  global $encode;
-  return htmlspecialchars($string, ENT_QUOTES,$encode);
-}
-function sanitize($arr){
-  if(is_array($arr)){
-        foreach ($arr as $key => $val) {
-      // キーも化けている可能性があるので変換する
-      $newKey = mb_convert_encoding($key, 'UTF-8', 'auto');
-      $newArr[$newKey] = sanitize($val);
-    }
-    return $newArr;
-  }
-  
-  return str_replace("\0", "", mb_convert_encoding($arr, 'UTF-8', 'auto'));
-}
-//Shift-JISの場合に誤変換文字の置換関数
-function sjisReplace($arr,$encode){
-  foreach($arr as $key => $val){
-    $key = str_replace('＼','ー',$key);
-    $resArray[$key] = $val;
-  }
-  return $resArray;
-}*/
 
 if(isset($_POST['submit']))
 {
