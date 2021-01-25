@@ -33,9 +33,6 @@ if(isset($_POST['submit']))
       $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
       $headers .= 'From: '.$user_name.'<'.$user_email.'>' . "\r\n";
 
-      //$message1 = mb_convert_encoding($message1,"JIS",$encode);
-      //$message1 = mb_convert_kana($message1,'a',$encode);
-
       if(mail($to1,$send_subject1,$send_message1,$headers)) {
         $headers = "";
         $to = $user_email;
@@ -68,9 +65,7 @@ if(isset($_POST['submit']))
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers .= 'From: '."Synergy Global 4U"."<SG4U@ten-nine.co.jp>"."\r\n";
         
-        //mb_internal_encoding(mb_detect_encoding($subject));
-        //$message = mb_convert_encoding($message,"JIS",$encode);
-        //$message = mb_convert_kana($message,'a',$encode);
+        
         mail($to,$re_subject,$message,$headers);
          
       }else {
